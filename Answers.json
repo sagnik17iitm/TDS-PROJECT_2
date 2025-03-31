@@ -1,0 +1,97 @@
+// GA1 Question 1:
+// curl -X POST "http://localhost:8000/api/" -H "Content-Type: multipart/form-data" -F "question=Install and run Visual Studio Code. In your Terminal (or Command Prompt), type code -s and press Enter. Copy and paste the entire output below.What is the output of code -s?"
+{
+    "answer":"Version:          Code 1.92.1 (eaa41d57266683296de7d118f574d0c2652e1fc4, 2024-08-07T20:16:39.455Z)
+OS Version:       Windows_NT x64 10.0.22631
+CPUs:             AMD Ryzen 5 5600H with Radeon Graphics          (12 x 3294)
+Memory (System):  19.86GB (7.01GB free)
+VM:               0%
+Screen Reader:    no
+Process Argv:     --crash-reporter-id 14ccfc0c-7485-47cb-91e7-bf29cee71382
+GPU Status:       2d_canvas:                              enabled
+                  canvas_oop_rasterization:               enabled_on
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  vulkan:                                 disabled_off
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %   Mem MB     PID  Process
+    0      126   10196  code main
+    0      141    7788     gpu-process
+    0      106   10036  ptyHost
+    0       64    9928       C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command "try { . \"d:\Microsoft VS Code\resources\app\out\vs\workbench\contrib\terminal\browser\media\shellIntegration.ps1\" } catch {}"
+    0        8   23984       conpty-agent
+    0       65   30052       C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command "try { . \"d:\Microsoft VS Code\resources\app\out\vs\workbench\contrib\terminal\browser\media\shellIntegration.ps1\" } catch {}"
+    0        7   19164         C:\WINDOWS\system32\cmd.exe /c ""D:\Microsoft VS Code\bin\code.cmd" -s"
+    0       92   30184           electron-nodejs (cli.js )
+    0      115    9916             "D:\Microsoft VS Code\Code.exe" -s
+    0      101   24348               gpu-process
+    0       81   27124               utility-network-service
+    0       80   27600               crashpad-handler
+    0        8   32344       conpty-agent
+    0       40   14168     utility-network-service
+    0      144   17172  extensionHost [1]
+    0        6   18808       c:\Users\sagni\.vscode\extensions\ms-python.python-2024.12.3-win32-x64\python-env-tools\bin\pet.exe server
+    0       11   32696         C:\WINDOWS\system32\conhost.exe 0x4
+    0      147   21900       electron-nodejs (bundle.js )
+    0       13   17264     C:\Users\sagni\AppData\Local\Temp\vscode-stable-user-x64\CodeSetup-stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba.exe /verysilent /log /update="C:\Users\sagni\AppData\Local\Temp\vscode-stable-user-x64\CodeSetup-stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba.flag" /nocloseapplications /mergetasks=runcode,!desktopicon,!quicklaunchicon
+    0       43   22448       "C:\Users\sagni\AppData\Local\Temp\is-4OL1J.tmp\CodeSetup-stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba.tmp" /SL5="$3F070C,103884704,828416,C:\Users\sagni\AppData\Local\Temp\vscode-stable-user-x64\CodeSetup-stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba.exe" /verysilent /log /update="C:\Users\sagni\AppData\Local\Temp\vscode-stable-user-x64\CodeSetup-stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba.flag" /nocloseapplications /mergetasks=runcode,!desktopicon,!quicklaunchicon
+    0      109   18212  shared-process
+    0       28   19660     crashpad-handler
+    0       79   20788  fileWatcher [1]
+    0      228   28240  window [1] (Untitled-1 - Visual Studio Code)"}
+    // GA1 Question 2:
+    //  curl -X POST "http://localhost:8000/api/" \
+    //  -H "Content-Type: multipart/form-data" \
+    //  -F "question=Running uv run --with httpie -- https [URL] installs the Python package httpie and sends a HTTPS request to the URL. Send a HTTPS request to https://httpbin.org/get with the URL encoded parameter email set to 22f3002640@ds.study.iitm.ac.in. What is the JSON output of the command? (Paste only the JSON body, not the headers)"
+    {
+        "answer": "{\n \"args\": {\n \"email\": \"22f3002640@ds.study.iitm.ac.in\"\n },\n \"headers\": {\n \"Accept\": \"_/_\",\n \"Accept-Encoding\": \"gzip, deflate\",\n \"Host\": \"httpbin.org\",\n \"User-Agent\": \"python-httpx/0.28.1\",\n \"X-Amzn-Trace-Id\": \"Root=1-67e0e49b-19cc348f24612e6b4a964cb8\"\n },\n \"origin\": \"152.58.177.70\",\n \"url\": \"https://httpbin.org/get?email=23f2003751%40ds.study.iitm.ac.in\"\n}"
+    }
+    // GA1 Question 3:
+    // curl -X POST "http://localhost:8000/api/"   -H "Content-Type: multipart/form-data"   -F "question=Download . In the directory where you downloaded it, make sure it is called README.md, and run npx -y prettier@3.4.2 README.md | sha256sum. What is the output of the command?"   -F "file=@tests\README.md"    
+    {
+        "result": "546f34cb1fbb09896491b147b86c1635ca79f4f5a91ce58882925d8fc43b3354 *-"
+    }
+    // GA1 Question 4:
+    //  curl -X POST "http://localhost:8000/api/" ^
+    //   -H "Content-Type: multipart/form-data" ^
+    //   -F "question=Let's make sure you can write formulas in Google Sheets. Type this formula into Google Sheets. (It won't work in Excel)
+    // =SUM(ARRAY_CONSTRAIN(SEQUENCE(100, 100, 5, 2), 1, 10))
+    // What is the result?"
+    {
+        "answer": "140"
+    }
+    //     GA1 Question 5:
+    //     curl -X POST "http://localhost:8000/api/" -H "Content-Type: multipart/form-data" -F question="Type this formula into Excel.       
+    // Note: This will ONLY work in Office 365.
+    // =SUM(TAKE(SORTBY({1,10,12,4,6,8,9,13,6,15,14,15,2,13,0,3}, {10,9,13,2,11,8,16,14,7,15,5,4,6,1,3,12}), 1, 6))
+    // What is the result?"
+    {
+        "answer": "131"
+    }
+    // GA1 question 7:
+    // curl -X POST "http://localhost:8000/api/" -H "Content-Type: multipart/form-data" -F question="How many Wednesdays are there in the date range 1986-08-06 to 2008-01-29?"
+    {
+        "answer": "1121"
+    }
+    // GA1 question 8:
+    // curl -X POST "http://localhost:8000/api/" -H "Content-Type: multipart/form-data" -F "question=Download and unzip file q-extract-csv-zip.zip which has a single extract.csv file inside. What is the value in the 'answer' column of the CSV file?" -F "file=@tests/q-extract-csv-zip.zip"
+    {
+        "answer": "e70d8"
+    }
+    // GA1 question 9:
+    //     curl -X POST "http://localhost:8000/api/" -H "Content-Type: multipart/form-data" -F "question=Sort this JSON array of objects by the value of the age field. In case of a tie, sort by the name field. Paste the resulting JSON below without any spaces or newlines. 
+    // [{\"name\":\"Alice\",\"age\":92},{\"name\":\"Bob\",\"age\":28},{\"name\":\"Charlie\",\"age\":16},{\"name\":\"David\",\"age\":56},{\"name\":\"Emma\",\"age\":70},{\"name\":\"Frank\",\"age\":67},{\"name\":\"Grace\",\"age\":36},{\"name\":\"Henry\",\"age\":94},{\"name\":\"Ivy\",\"age\":44},{\"name\":\"Jack\",\"age\":53},{\"name\":\"Karen\",\"age\":65},{\"name\":\"Liam\",\"age\":23},{\"name\":\"Mary\",\"age\":97},{\"name\":\"Nora\",\"age\":68},{\"name\":\"Oscar\",\"age\":57},{\"name\":\"Paul\",\"age\":88}]"
+    {
+        "answer": "[{\"name\":\"Charlie\",\"age\":16},{\"name\":\"Liam\",\"age\":23},{\"name\":\"Bob\",\"age\":28},{\"name\":\"Grace\",\"age\":36},{\"name\":\"Ivy\",\"age\":44},{\"name\":\"Jack\",\"age\":53},{\"name\":\"David\",\"age\":56},{\"name\":\"Oscar\",\"age\":57},{\"name\":\"Karen\",\"age\":65},{\"name\":\"Frank\",\"age\":67},{\"name\":\"Nora\",\"age\":68},{\"name\":\"Emma\",\"age\":70},{\"name\":\"Paul\",\"age\":88},{\"name\":\"Alice\",\"age\":92},{\"name\":\"Henry\",\"age\":94},{\"name\":\"Mary\",\"age\":97}]"
+    }
